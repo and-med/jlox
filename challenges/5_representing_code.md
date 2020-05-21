@@ -3,12 +3,11 @@
 ```
 expr -> expr call
 expr -> expr dot
-expr -> expr "," expr
 expr -> IDENTIFIER
 expr -> NUMBER
-call -> "(" expr ")"
+call -> "(" arg ")"
 call -> "(" ")"
-call -> call call
 dot  -> "." IDENTIFIER
-dot  -> dot dot
+arg  -> arg "," arg
+arg  -> expr
 ```
