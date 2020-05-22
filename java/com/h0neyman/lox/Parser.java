@@ -7,7 +7,8 @@ import javax.print.DocFlavor.STRING;
 import static com.h0neyman.lox.TokenType.*;
 
 // Grammar Rules:
-// expression     → equality ;
+// expression     → comma ;
+// comma          → equality ( "," equality )* ;
 // equality       → comparison ( ( "!=" | "==" ) comparison )* ;
 // comparison     → addition ( ( ">" | ">=" | "<" | "<=" ) addition )* ;
 // addition       → multiplication ( ( "-" | "+" ) multiplication )* ;
