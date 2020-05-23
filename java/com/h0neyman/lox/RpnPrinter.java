@@ -1,9 +1,11 @@
 package com.h0neyman.lox;
 
+import com.h0neyman.lox.Expr.Assign;
 import com.h0neyman.lox.Expr.Binary;
 import com.h0neyman.lox.Expr.Grouping;
 import com.h0neyman.lox.Expr.Literal;
 import com.h0neyman.lox.Expr.Unary;
+import com.h0neyman.lox.Expr.Variable;
 
 public class RpnPrinter implements Expr.Visitor<String> {
     String print(Expr expr) {
@@ -30,6 +32,16 @@ public class RpnPrinter implements Expr.Visitor<String> {
     @Override
     public String visitUnaryExpr(Unary expr) {
         return reversePrint(expr.operator.lexeme, expr.right);
+    }
+
+    @Override
+    public String visitVariableExpr(Variable expr) {
+        return expr.name.toString();
+    }
+
+    @Override
+    public String visitAssignExpr(Assign expr) {
+        return reversePrint(expr.name.lexeme, expr.value);
     }
 
     private String reversePrint(String name, Expr... exprs) {

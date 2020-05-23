@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-AstPrinter<lox_89755724>",
+            "request": "launch",
+            "mainClass": "com.h0neyman.lox.AstPrinter",
+            "projectName": "lox_89755724"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Lox<lox_89755724>",
+            "request": "launch",
+            "mainClass": "com.h0neyman.lox.Lox",
+            "projectName": "lox_89755724",
+            "args": "example.lox",
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RpnPrinter<lox_89755724>",
+            "request": "launch",
+            "mainClass": "com.h0neyman.lox.RpnPrinter",
+            "projectName": "lox_89755724"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GenerateAst<lox_89755724>",
+            "request": "launch",
+            "mainClass": "com.h0neyman.tool.GenerateAst",
+            "projectName": "lox_89755724"
+        }
+    ]
+}
