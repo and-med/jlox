@@ -5,7 +5,12 @@ Run make in the repository
 ```bash
 make
 ```
-Run interpreter from the root of the repository
+Run interpreter from in REPL mode
 ```bash
 ./jlox
+```
+
+Run lox file
+```bash
+./jlox example.lox
 ```
