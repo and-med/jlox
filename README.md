@@ -5,7 +5,7 @@ Run make in the repository
 ```bash
 make
 ```
-Run interpreter from in REPL mode
+Run interpreter in REPL mode
 ```bash
 ./jlox
 ```
