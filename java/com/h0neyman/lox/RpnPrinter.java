@@ -2,8 +2,10 @@ package com.h0neyman.lox;
 
 import com.h0neyman.lox.Expr.Assign;
 import com.h0neyman.lox.Expr.Binary;
+import com.h0neyman.lox.Expr.Call;
 import com.h0neyman.lox.Expr.Grouping;
 import com.h0neyman.lox.Expr.Literal;
+import com.h0neyman.lox.Expr.Logical;
 import com.h0neyman.lox.Expr.Unary;
 import com.h0neyman.lox.Expr.Variable;
 
@@ -42,6 +44,19 @@ public class RpnPrinter implements Expr.Visitor<String> {
     @Override
     public String visitAssignExpr(Assign expr) {
         return reversePrint(expr.name.lexeme, expr.value);
+    }
+
+    @Override
+    public String visitLogicalExpr(Logical expr) {
+        return reversePrint(expr.operator.lexeme, expr.left, expr.right);
+    }
+
+    @Override
+    public String visitCallExpr(Call expr) {
+        Expr res[] = new Expr[expr.arguments.size()];
+        res = expr.arguments.toArray(res);
+
+        return reversePrint(reversePrint("function", expr.callee), res);
     }
 
     private String reversePrint(String name, Expr... exprs) {

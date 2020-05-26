@@ -10,7 +10,7 @@ Run interpreter in REPL mode
 ./jlox
 ```
 
-Run lox file
+Run fibonacci example
 ```bash
-./jlox example.lox
+./jlox examples/fibonacci.lox
 ```
