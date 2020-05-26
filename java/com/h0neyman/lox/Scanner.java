@@ -104,6 +104,8 @@ public class Scanner {
                     addToken(SLASH);
                 }
                 break;
+            case '%':
+                addToken(REMINDER);
 
             case ' ':
             case '\r':

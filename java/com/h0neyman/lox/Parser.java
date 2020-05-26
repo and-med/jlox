@@ -275,7 +275,7 @@ public class Parser {
     private Expr multiplication() {
         Expr expr = unary();
 
-        while (match(SLASH, STAR)) {
+        while (match(SLASH, STAR, REMINDER)) {
             Token operator = previous();
             Expr right = unary();
             expr = new Expr.Binary(expr, operator, right);
