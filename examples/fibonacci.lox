@@ -4,5 +4,5 @@ fun fibonacci(n) {
 }
 
 for (var i = 0; i < 30; i = i + 1) {
-    print i + " " + fibonacci(i);
+    print fibonacci(i);
 }
