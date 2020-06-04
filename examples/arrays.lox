@@ -1,0 +1,36 @@
+var array = Array(7);
+
+array.set(0, 30);
+array.set(1, 5);
+array.set(2, 25);
+array.set(3, 10);
+array.set(4, 8);
+array.set(5, 18);
+array.set(6, 21);
+
+fun sort(arr) {
+    // Make a copy so that sort is immutable.
+    var sorted = Array(arr.length);
+
+    for (var i = 0; i < arr.length; i = i + 1) {
+        sorted.set(i, arr.get(i));
+    }
+
+    // Simple bubble sort
+    for (var i = 0; i < arr.length; i = i + 1) {
+        for (var j = i + 1; j < arr.length; j = j + 1) {
+            if (sorted.get(i) > sorted.get(j)) {
+                var temp = sorted.get(i);
+                sorted.set(i, sorted.get(j));
+                sorted.set(j, temp);
+            }
+        }
+    }
+
+    return sorted;
+}
+
+print "Not sorted:";
+print array;
+print "Sorted: ";
+print sort(array);
