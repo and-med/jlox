@@ -1,4 +1,4 @@
-This is a java implementation of a lox programming language by [http://craftinginterpreters.com](craftinginterpreters.com)
+This is a java implementation of a lox programming language created by [craftinginterpreters](https://github.com/munificent/craftinginterpreters)
 
 ## Building
 Run make in the repository
